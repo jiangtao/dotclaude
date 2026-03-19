@@ -6,9 +6,38 @@ Advanced development superpowers for orchestrating complex workflows from idea t
 
 ## Installation
 
+### Original Marketplace Install
+
 ```bash
 claude plugin install superpowers@frad-dotclaude
 ```
+
+### Maintained Fork Install
+
+This repository is the maintained fork for Jerret's team.
+
+From the repository root:
+
+```bash
+claude plugin validate superpowers
+claude --plugin-dir "$PWD/superpowers"
+```
+
+For a fresh clone:
+
+```bash
+git clone https://github.com/jiangtao/dotclaude.git
+cd dotclaude
+claude plugin validate superpowers
+claude --plugin-dir "$PWD/superpowers"
+```
+
+Notes:
+
+- `claude plugin validate superpowers` checks that the local plugin manifest is compatible with your Claude Code version.
+- `claude --plugin-dir "$PWD/superpowers"` starts Claude Code with this local plugin loaded for the current session.
+- The maintained Claude fork source is `jiangtao/dotclaude`.
+- If a dedicated `jiangtao` marketplace is created later, a one-command `claude plugin install superpowers@jiangtao` flow can be added then.
 
 ## Overview
 
@@ -160,9 +189,19 @@ superpowers/
 - **Agent Teams:** Spawn specialized agents for parallel work
 - **Git Integration:** Automatic commit messages with proper attribution
 
-## Author
+## Attribution
+
+**Original author**
 
 Frad LEE (fradser@gmail.com)
+
+This workflow is based on Frad LEE's original `superpowers` design and structure. Many thanks to Frad for building and sharing the foundation that made this adaptation possible.
+
+**Fork maintenance and customization**
+
+Jerret (321jiangtao@gmail.com)
+
+This fork is maintained in `jiangtao/dotclaude` for Jerret's team workflows and Claude-side customization.
 
 ## License
 
