@@ -27,10 +27,11 @@ Turn rough ideas into implementation-ready designs through structured collaborat
 This skill uses Superpower Loop to enable self-referential iteration throughout the brainstorming process.
 
 **CRITICAL**: Throughout the process, you MUST output `<promise>BRAINSTORMING_COMPLETE</promise>` only when:
-- Phase 1-4 (Discovery, Option Analysis, Design Creation, Design Reflection) are all complete
+- Phase 1-6 (Discovery, Option Analysis, Design Creation, Design Reflection, Git Commit, Compact Reminder) are all complete
 - Design folder created with all required documents
 - User approval received in Phase 2
 - Git commit completed
+- Compact reminder presented
 
 Do NOT output the promise until ALL conditions are genuinely TRUE.
 
@@ -212,6 +213,32 @@ Output in this exact order:
 2. `<promise>BRAINSTORMING_COMPLETE</promise>` — nothing after this
 
 **PROHIBITED**: Do NOT offer to start implementation directly. Do NOT output any text after the promise tag.
+
+## Phase 7: Compact Reminder
+
+**When to trigger:** After design document is committed
+
+**Reminder message:**
+
+```
+💡 **Compact Reminder**
+
+Design phase complete. Consider using `/compact` to preserve context:
+- Design decisions and rationale
+- Codebase exploration findings
+- Key architectural choices
+
+Token usage: {{TOKEN_USAGE}} / {{TOKEN_LIMIT}}
+
+To compact now: `/compact`
+To continue: Proceed to writing-plans
+```
+
+**State capture:**
+- Use `superpowers/skills/references/compact-state-extractor.md` to extract state
+- Use `superpowers/skills/references/compact-template.md` to generate compact document
+- Use `superpowers/skills/references/state-json-writer.md` to write `.claude/.superpower-state.json`
+- Save compact document to `.claude/compacts/YYYY-MM-DD-HHMMSS.md`
 
 ## References
 

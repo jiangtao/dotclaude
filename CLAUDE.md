@@ -27,6 +27,34 @@ plugin-name/
 
 **Hooks** can be inline in `plugin.json`. See `git/.claude-plugin/plugin.json` for the `PreToolUse` hook pattern (runs a shell script to validate Bash tool calls before execution).
 
+## Compact Mechanism
+
+The superpowers plugin includes a compact mechanism to preserve workflow state across `/compact` operations.
+
+**Purpose:** Preserve BDD Loop and Agent-Team state during long sessions to enable seamless recovery after compacting.
+
+**Storage:**
+- `.claude/.superpower-state.json` - Minimal state for quick reading
+- `.claude/compacts/YYYY-MM-DD-HHMMSS.md` - Complete context documents
+
+**Trigger Points:**
+1. **Phase Completion** - After brainstorming, writing-plans, or executing-plans completes
+2. **Agent Task Completion** - After any Agent-Team member completes a task
+3. **BDD Retry Threshold** - When BDD loop shows non-convergence (2+ failures, 50% retry threshold)
+4. **Token Threshold** - At 50%, 70%, and 85% token usage
+
+**Usage:**
+1. When you see a compact reminder, review the current state
+2. Run `/compact` to compress conversation history
+3. State is automatically preserved in `.claude/` directory
+4. On resume, reference the latest compact document to restore context
+
+**State Preserved:**
+- BDD Loop: phase, scenarios, retry counts, convergence status
+- Agent-Team: active agents, coordination mode, blockers
+- Workflow: current plan, task progress, completion status
+- Session: key decisions, code changes, TODOs
+
 ## Development Workflow
 
 **Validation:** Run `/plugin-optimizer:optimize-plugin` before committing. Alternatively:

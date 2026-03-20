@@ -46,3 +46,35 @@ See `./references/initiate-team-workflow.md` and `./references/manage-team-workf
 - Monitor frequently; unattended teams risk wasted effort
 
 For architecture, capabilities, and limitations, see `./references/official-documentation.md`.
+
+## Compact Reminder After Agent Task
+
+**When to trigger:** After any agent (Implementer, Reviewer, Architect) completes a task
+
+**Reminder message:**
+
+```
+💡 **Compact Reminder**
+
+Agent task complete. Consider using `/compact` to preserve context:
+- Agent: {{AGENT_ROLE}}
+- Task: {{TASK_DESCRIPTION}}
+- Status: {{TASK_STATUS}}
+- Findings: {{KEY_FINDINGS}}
+
+Token usage: {{TOKEN_USAGE}} / {{TOKEN_LIMIT}}
+
+To compact now: `/compact`
+To continue: Proceed with next task
+```
+
+**State capture:**
+- Use `superpowers/skills/references/compact-state-extractor.md` to extract Agent-Team state
+- Use `superpowers/skills/references/compact-template.md` to generate compact document
+- Use `superpowers/skills/references/state-json-writer.md` to write `.claude/.superpower-state.json`
+- Save compact document to `.claude/compacts/YYYY-MM-DD-HHMMSS.md`
+
+**Trigger conditions:**
+- Implementer completes implementation task
+- Reviewer completes code review
+- Architect completes design adjustment
