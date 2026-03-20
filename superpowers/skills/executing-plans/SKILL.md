@@ -174,6 +174,32 @@ Output in this exact order:
 
 **PROHIBITED**: Do NOT output any text after the promise tag.
 
+### Compact Reminder
+
+**When to trigger:** After all tasks are completed and verified
+
+**Reminder message:**
+
+```
+💡 **Compact Reminder**
+
+Execution phase complete. Consider using `/compact` to preserve context:
+- Task completion status
+- Verification results
+- Implementation decisions
+
+Token usage: {{TOKEN_USAGE}} / {{TOKEN_LIMIT}}
+
+To compact now: `/compact`
+To continue: Proceed to finishing-a-development-branch
+```
+
+**State capture:**
+- Use `superpowers/skills/references/compact-state-extractor.md` to extract state
+- Use `superpowers/skills/references/compact-template.md` to generate compact document
+- Use `superpowers/skills/references/state-json-writer.md` to write `.claude/.superpower-state.json`
+- Save compact document to `.claude/compacts/YYYY-MM-DD-HHMMSS.md`
+
 ## Exit Criteria
 
 All tasks executed and verified, evidence captured, no blockers, user approval received, final verification passes, git commit completed.
