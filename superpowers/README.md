@@ -9,7 +9,7 @@ Advanced development superpowers for orchestrating complex workflows from idea t
 ### Original Marketplace Install
 
 ```bash
-claude plugin install superpowers@frad-dotclaude
+claude plugin install superpowers@jiangtao
 ```
 
 ### Maintained Fork Install
@@ -109,6 +109,64 @@ Loaded when the user wants to challenge industry conventions or approach open-en
 ### Systematic Debugging
 
 Loaded when diagnosing bugs or unexpected behavior. Provides a 4-phase methodology: root cause investigation, pattern analysis, hypothesis testing, and implementation.
+
+## Compact Mechanism
+
+The superpowers plugin includes an intelligent compact mechanism to preserve workflow state across long sessions.
+
+### What It Does
+
+Automatically reminds you to use `/compact` at strategic points and preserves critical state:
+- **BDD Loop State** - Current phase, scenarios, retry counts, convergence status
+- **Agent-Team State** - Active agents, coordination mode, task progress, blockers
+- **Workflow State** - Current plan, task completion, verification results
+- **Session Context** - Key decisions, code changes, TODOs
+
+### When It Triggers
+
+**Phase Completion:**
+- After brainstorming design is committed
+- After writing-plans plan is saved
+- After executing-plans all tasks complete
+
+**Agent Task Completion:**
+- Implementer completes implementation
+- Reviewer completes code review
+- Architect completes design adjustment
+
+**BDD Retry Threshold:**
+- Same scenario fails 2+ times
+- Retry count reaches 50% of threshold
+- Error pattern not converging
+
+**Token Thresholds:**
+- 💡 50% (100K/200K) - Informational
+- ⚠️ 70% (140K/200K) - Warning
+- 🚨 85% (170K/200K) - Critical
+
+### Storage Structure
+
+```
+.claude/
+├── .superpower-state.json          # Minimal state (JSON)
+└── compacts/
+    ├── 2026-03-19-143015.md        # Complete context (Markdown)
+    └── 2026-03-19-150230.md
+```
+
+### How to Use
+
+1. **See Reminder** - Watch for compact reminders during workflow
+2. **Review State** - Check what will be preserved
+3. **Run Compact** - Execute `/compact` command
+4. **Resume Later** - Reference latest compact document to restore context
+
+### Benefits
+
+- **Seamless Recovery** - Resume BDD loops and Agent-Team coordination after compact
+- **Context Preservation** - Never lose critical decisions or progress
+- **Token Management** - Proactive reminders before hitting limits
+- **Dual Storage** - JSON for programs, Markdown for humans
 
 ## End-to-End Workflow
 
