@@ -9,7 +9,7 @@ Advanced development superpowers for orchestrating complex workflows from idea t
 ### Original Marketplace Install
 
 ```bash
-claude plugin install superpowers@jiangtao
+claude plugin install superpowers@jiangtao-dotclaude
 ```
 
 ### Maintained Fork Install
