@@ -104,7 +104,7 @@ claude plugin install review@frad-dotclaude
 Advanced development superpowers for orchestrating complex workflows from idea to execution with BDD and Agent Team support.
 
 ```bash
-claude plugin install superpowers@frad-dotclaude
+claude plugin install superpowers@jiangtao
 ```
 
 **Key Features:**
