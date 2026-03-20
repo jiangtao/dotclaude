@@ -181,6 +181,32 @@ Commit the plan folder to git with proper message format.
 
 See `../../skills/references/git-commit.md` for detailed patterns.
 
+## Compact Reminder
+
+**When to trigger:** After plan is saved
+
+**Reminder message:**
+
+```
+💡 **Compact Reminder**
+
+Planning phase complete. Consider using `/compact` to preserve context:
+- Plan structure and task breakdown
+- BDD scenario mappings
+- Dependency analysis
+
+Token usage: {{TOKEN_USAGE}} / {{TOKEN_LIMIT}}
+
+To compact now: `/compact`
+To continue: Choose execution approach below
+```
+
+**State capture:**
+- Use `superpowers/skills/references/compact-state-extractor.md` to extract state
+- Use `superpowers/skills/references/compact-template.md` to generate compact document
+- Use `superpowers/skills/references/state-json-writer.md` to write `.claude/.superpower-state.json`
+- Save compact document to `.claude/compacts/YYYY-MM-DD-HHMMSS.md`
+
 ## Phase 6: Transition to Execution
 
 Prompt the user to use `superpowers:executing-plans`, then output the promise as the absolute last line.
