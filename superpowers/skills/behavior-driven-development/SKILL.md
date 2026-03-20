@@ -41,6 +41,43 @@ The engine of implementation:
 2.  **GREEN:** Write the minimal code to pass the test.
 3.  **REFACTOR:** Clean up the code while keeping tests passing.
 
+### 4. Compact Reminder on BDD Retry Threshold
+
+**When to trigger:** When BDD loop shows signs of non-convergence
+
+**Trigger conditions:**
+- Same scenario fails 2+ times
+- Retry count reaches 50% of threshold (e.g., 4/8)
+- Error pattern not converging (same error repeating)
+
+**Reminder message:**
+
+```
+🚨 **Compact Reminder - BDD Loop Retry Threshold**
+
+BDD loop showing signs of non-convergence. Consider using `/compact` to preserve context before escalation:
+- Scenario: {{SCENARIO_NAME}}
+- Retry count: {{RETRY_COUNT}} / {{MAX_RETRIES}}
+- Error pattern: {{ERROR_PATTERN}}
+- Convergence: {{CONVERGING_STATUS}}
+
+Token usage: {{TOKEN_USAGE}} / {{TOKEN_LIMIT}}
+
+To compact now: `/compact`
+To continue: Attempt next retry or escalate
+```
+
+**State capture:**
+- Use `superpowers/skills/references/compact-state-extractor.md` to extract BDD Loop state
+- Use `superpowers/skills/references/compact-template.md` to generate compact document
+- Use `superpowers/skills/references/state-json-writer.md` to write `.claude/.superpower-state.json`
+- Save compact document to `.claude/compacts/YYYY-MM-DD-HHMMSS.md`
+
+**Escalation signals to capture:**
+- Repeated error messages
+- Non-converging test failures
+- Approaching retry limit
+
 ## Quick Reference: The Iron Law
 
 > **"No production code is written without a failing test first."**
