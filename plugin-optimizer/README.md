@@ -9,7 +9,7 @@ Validates and optimizes Claude Code plugins against official best practices and 
 ### From Marketplace
 
 ```bash
-claude plugin install plugin-optimizer@frad-dotclaude
+claude plugin install plugin-optimizer@jiangtao-dotclaude
 ```
 
 ### Local Development

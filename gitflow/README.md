@@ -7,7 +7,7 @@ GitFlow workflow automation using [git-flow-next](https://git-flow.sh/docs/) CLI
 ## Installation
 
 ```bash
-claude plugin install gitflow@frad-dotclaude
+claude plugin install gitflow@jiangtao-dotclaude
 ```
 
 ## Requirements

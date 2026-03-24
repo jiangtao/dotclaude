@@ -7,7 +7,7 @@ Conventional Git automation and advanced repository management.
 ## Installation
 
 ```bash
-claude plugin install git@frad-dotclaude
+claude plugin install git@jiangtao-dotclaude
 ```
 
 ## Overview

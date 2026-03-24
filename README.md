@@ -1,6 +1,8 @@
 # Frad's Claude Code Plugins
 
-A curated collection of plugins and skills for Claude Code, designed to enhance development workflows with specialized agents and automation tools.
+> **Maintained by Jerret** | Originally created by Frad LEE
+
+A curated collection of plugins and skills for Claude Code, optimized for Jerret's workflow with specialized agents and automation tools.
 
 ## Installation
 
@@ -9,7 +11,7 @@ A curated collection of plugins and skills for Claude Code, designed to enhance 
 First, add this repository as a plugin marketplace:
 
 ```bash
-claude plugin marketplace add FradSer/dotclaude
+claude plugin marketplace add jiangtao/dotclaude
 ```
 
 This will make all plugins in this marketplace available for installation.
@@ -19,7 +21,22 @@ This will make all plugins in this marketplace available for installation.
 After adding the marketplace, you can install any plugin using:
 
 ```bash
-claude plugin install <plugin-name>@frad-dotclaude
+claude plugin install <plugin-name>@jiangtao-dotclaude
+```
+
+### Migration from Old Marketplace
+
+If you previously installed from `@frad-dotclaude`, you need to migrate:
+
+```bash
+# 1. Remove old marketplace
+claude plugin marketplace remove frad-dotclaude
+
+# 2. Add new marketplace
+claude plugin marketplace add jiangtao/dotclaude
+
+# 3. Reinstall plugins
+claude plugin install <plugin-name>@jiangtao-dotclaude
 ```
 
 ## Available Plugins
@@ -29,7 +46,7 @@ claude plugin install <plugin-name>@frad-dotclaude
 Conventional Git automation for commits and repository management with AI code quality check.
 
 ```bash
-claude plugin install git@frad-dotclaude
+claude plugin install git@jiangtao-dotclaude
 ```
 
 **Key Features:**
@@ -46,7 +63,7 @@ claude plugin install git@frad-dotclaude
 GitFlow workflow automation for feature, hotfix, and release branches with semantic versioning.
 
 ```bash
-claude plugin install gitflow@frad-dotclaude
+claude plugin install gitflow@jiangtao-dotclaude
 ```
 
 **Key Features:**
@@ -66,7 +83,7 @@ claude plugin install gitflow@frad-dotclaude
 GitHub project operations with comprehensive quality validation and TDD workflows.
 
 ```bash
-claude plugin install github@frad-dotclaude
+claude plugin install github@jiangtao-dotclaude
 ```
 
 **Key Features:**
@@ -85,7 +102,7 @@ claude plugin install github@frad-dotclaude
 Multi-agent review system for enforcing high code quality with selective and hierarchical review modes.
 
 ```bash
-claude plugin install review@frad-dotclaude
+claude plugin install review@jiangtao-dotclaude
 ```
 
 **Key Features:**
@@ -104,7 +121,8 @@ claude plugin install review@frad-dotclaude
 Advanced development superpowers for orchestrating complex workflows from idea to execution with BDD and Agent Team support.
 
 ```bash
-claude plugin install superpowers@jiangtao-dotclaude
+claude plugin marketplace add jiangtao/dotclaude
+claude plugin install superpowers
 ```
 
 **Key Features:**
@@ -123,7 +141,7 @@ claude plugin install superpowers@jiangtao-dotclaude
 Code simplification and refactoring with best practices to improve code quality while preserving functionality.
 
 ```bash
-claude plugin install refactor@frad-dotclaude
+claude plugin install refactor@jiangtao-dotclaude
 ```
 
 **Key Features:**
@@ -142,7 +160,7 @@ claude plugin install refactor@frad-dotclaude
 SwiftUI Clean Architecture reviewer for iOS/macOS development with best practices enforcement.
 
 ```bash
-claude plugin install swiftui@frad-dotclaude
+claude plugin install swiftui@jiangtao-dotclaude
 ```
 
 **Key Features:**
@@ -157,7 +175,7 @@ claude plugin install swiftui@frad-dotclaude
 Generate comprehensive CLAUDE.md configuration files with environment detection and interactive workflow.
 
 ```bash
-claude plugin install claude-config@frad-dotclaude
+claude plugin install claude-config@jiangtao-dotclaude
 ```
 
 **Key Features:**
@@ -176,7 +194,7 @@ claude plugin install claude-config@frad-dotclaude
 Specialized skills for patent application generation, Feishu document creation, and product requirements documents.
 
 ```bash
-claude plugin install office@frad-dotclaude
+claude plugin install office@jiangtao-dotclaude
 ```
 
 **Key Features:**
@@ -195,7 +213,7 @@ claude plugin install office@frad-dotclaude
 Validate and optimize Claude Code plugins with agent-based fixes and comprehensive validation.
 
 ```bash
-claude plugin install plugin-optimizer@frad-dotclaude
+claude plugin install plugin-optimizer@jiangtao-dotclaude
 ```
 
 **Key Features:**
@@ -542,7 +560,7 @@ After installing a plugin, verify it's available:
 claude plugin list
 
 # Check plugin status
-claude plugin info <plugin-name>@frad-dotclaude
+claude plugin info <plugin-name>@jiangtao-dotclaude
 ```
 
 ## Usage Examples

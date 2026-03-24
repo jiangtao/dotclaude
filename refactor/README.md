@@ -7,7 +7,7 @@ Agent and skills for code simplification and refactoring to improve code quality
 ## Installation
 
 ```bash
-claude plugin install refactor@frad-dotclaude
+claude plugin install refactor@jiangtao-dotclaude
 ```
 
 ## Overview

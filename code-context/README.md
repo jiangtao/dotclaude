@@ -7,7 +7,7 @@
 ## Installation
 
 ```bash
-claude plugin install code-context@frad-dotclaude
+claude plugin install code-context@jiangtao-dotclaude
 ```
 
 ## Overview

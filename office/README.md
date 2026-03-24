@@ -7,7 +7,7 @@ Specialized Claude Skill for patent application generation and intellectual prop
 ## Installation
 
 ```bash
-claude plugin install office@frad-dotclaude
+claude plugin install office@jiangtao-dotclaude
 ```
 
 ## Quick Start

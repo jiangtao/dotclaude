@@ -9,7 +9,7 @@ SwiftUI code review with modern API best practices.
 ## Installation
 
 ```bash
-claude plugin install swiftui@frad-dotclaude
+claude plugin install swiftui@jiangtao-dotclaude
 ```
 
 ## Overview

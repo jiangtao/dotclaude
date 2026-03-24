@@ -9,7 +9,7 @@ Next.js development tools integration via MCP server — runtime diagnostics, de
 ## Installation
 
 ```bash
-claude plugin install next-devtools@frad-dotclaude
+claude plugin install next-devtools@jiangtao-dotclaude
 ```
 
 ## Overview

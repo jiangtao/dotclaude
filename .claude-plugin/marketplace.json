@@ -1,11 +1,17 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "frad-dotclaude",
-  "description": "Frad's Claude Code plugin marketplace featuring specialized agents and workflow automation",
+  "name": "jiangtao-dotclaude",
+  "description": "optimize cc workflow for jerret",
   "owner": {
     "name": "Frad LEE",
     "email": "fradser@gmail.com"
   },
+  "maintainers": [
+    {
+      "name": "Jerret",
+      "email": "321jiangtao@gmail.com"
+    }
+  ],
   "plugins": [
     {
       "name": "git",

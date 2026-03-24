@@ -7,7 +7,7 @@ Multi-agent review system for enforcing high code quality.
 ## Installation
 
 ```bash
-claude plugin install review@frad-dotclaude
+claude plugin install review@jiangtao-dotclaude
 ```
 
 ## Overview

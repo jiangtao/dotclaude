@@ -7,7 +7,7 @@ A comprehensive Claude Code plugin to generate personalized AI assistant configu
 ## Installation
 
 ```bash
-claude plugin install claude-config@frad-dotclaude
+claude plugin install claude-config@jiangtao-dotclaude
 ```
 
 ## Features

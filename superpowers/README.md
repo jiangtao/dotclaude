@@ -6,19 +6,19 @@ Advanced development superpowers for orchestrating complex workflows from idea t
 
 ## Installation
 
-### Original Marketplace Install
+### Quick Install
 
 ```bash
-claude plugin install superpowers@jiangtao-dotclaude
+claude plugin marketplace add jiangtao/dotclaude
+claude plugin install superpowers
 ```
 
-### Maintained Fork Install
+### Local Development Install
 
-This repository is the maintained fork for Jerret's team.
-
-From the repository root:
+For local plugin development or testing:
 
 ```bash
+# From repository root
 claude plugin validate superpowers
 claude --plugin-dir "$PWD/superpowers"
 ```
@@ -34,10 +34,10 @@ claude --plugin-dir "$PWD/superpowers"
 
 Notes:
 
-- `claude plugin validate superpowers` checks that the local plugin manifest is compatible with your Claude Code version.
-- `claude --plugin-dir "$PWD/superpowers"` starts Claude Code with this local plugin loaded for the current session.
-- The maintained Claude fork source is `jiangtao/dotclaude`.
-- If a dedicated `jiangtao` marketplace is created later, a one-command `claude plugin install superpowers@jiangtao` flow can be added then.
+- `claude plugin marketplace add jiangtao/dotclaude` adds the marketplace (one-time setup)
+- `claude plugin install superpowers` installs the plugin from the marketplace
+- `claude plugin validate superpowers` checks local plugin compatibility
+- `claude --plugin-dir "$PWD/superpowers"` loads the local plugin for current session
 
 ## Overview
 

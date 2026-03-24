@@ -7,7 +7,7 @@ GitHub project operations with quality gates, TDD workflows, and comprehensive i
 ## Installation
 
 ```bash
-claude plugin install github@frad-dotclaude
+claude plugin install github@jiangtao-dotclaude
 ```
 
 **Requirements:**
