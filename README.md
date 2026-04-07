@@ -122,7 +122,7 @@ Advanced development superpowers for orchestrating complex workflows from idea t
 
 ```bash
 claude plugin marketplace add jiangtao/dotclaude
-claude plugin install superpowers
+claude plugin install superpowers@jiangtao/dotclaude
 ```
 
 **Key Features:**
